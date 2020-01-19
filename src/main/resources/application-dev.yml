@@ -1,0 +1,40 @@
+server:
+  port: 9092
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo_druid?useSSL=false
+    username: root
+    password: wang1129
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#spring:
+#  datasource:
+#    dynamic:
+#      primary: onedb #设置默认的数据源或者数据源组,onedb
+#      datasource:
+#        onedb:
+#          username: root
+#          password: wang1129
+#          driver-class-name: com.mysql.jdbc.Driver
+#          url: jdbc:mysql://localhost:3306/demo_druid?useSSL=false
+#        twodb:
+#          username: test
+#          password: 123456
+#          driver-class-name: com.mysql.jdbc.Driver
+#          url: jdbc:mysql://office-server:3306/UCareDB_Test?useSSL=false
+#        threedb:
+#          username: test
+#          password: 123456
+#          driver-class-name: com.mysql.jdbc.Driver
+#          url: jdbc:mysql://office-server:3306/luffy?useSSL=false
+
+  jackson:
+    time-zone:
+      Asia/Shanghai
+    default-property-inclusion: always
+    deserialization:
+      #允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+
