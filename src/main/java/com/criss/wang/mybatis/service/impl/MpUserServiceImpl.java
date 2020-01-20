@@ -1,5 +1,6 @@
 package com.criss.wang.mybatis.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.criss.wang.mybatis.entity.MpUser;
@@ -20,6 +21,7 @@ import java.util.List;
  * @since 2020-01-16
  */
 @Service
+@DS("master")
 public class MpUserServiceImpl extends ServiceImpl<MpUserMapper, MpUser> implements IMpUserService {
 
     @Autowired

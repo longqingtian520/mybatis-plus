@@ -1,13 +1,13 @@
 server:
   port: 9092
 
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/demo_druid?useSSL=false
-    username: root
-    password: wang1129
-    type: com.alibaba.druid.pool.DruidDataSource
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/demo_druid?useSSL=false
+#    username: root
+#    password: wang1129
+#    type: com.alibaba.druid.pool.DruidDataSource
 
 #spring:
 #  datasource:
@@ -29,6 +29,23 @@ spring:
 #          password: 123456
 #          driver-class-name: com.mysql.jdbc.Driver
 #          url: jdbc:mysql://office-server:3306/luffy?useSSL=false
+
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #设置严格模式,默认false不启动. 启动后再为匹配到指定数据源时候回抛出异常,不启动会使用默认数据源.
+      datasource:
+        master:
+          url: jdbc:mysql://localhost:3306/demo_druid?useSSL=false
+          driver-class-name: com.mysql.jdbc.Driver
+          username: root
+          password: wang1129
+        slave:
+          url: jdbc:mysql://office-server:3306/UCareDB_Test?useSSL=false
+          driver-class-name: com.mysql.jdbc.Driver
+          username: test
+          password: 123456
 
   jackson:
     time-zone:

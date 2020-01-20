@@ -1,5 +1,6 @@
 package com.criss.wang.mybatis.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.criss.wang.mybatis.entity.TbDeviceConnection;
 import com.criss.wang.mybatis.mapper.TbDeviceConnectionMapper;
 import com.criss.wang.mybatis.service.ITbDeviceConnectionService;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
  * @since 2020-01-19
  */
 @Service
+@DS("slave")
 public class TbDeviceConnectionServiceImpl extends ServiceImpl<TbDeviceConnectionMapper, TbDeviceConnection> implements ITbDeviceConnectionService {
 
 }

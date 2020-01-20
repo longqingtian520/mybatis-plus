@@ -1,7 +1,6 @@
-package com.criss.wang.mybatis.user.controller;
+package com.criss.wang.mybatis.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -10,7 +9,6 @@ import com.criss.wang.mybatis.entity.MpUser;
 import com.criss.wang.mybatis.mapper.MpUserMapper;
 import com.criss.wang.mybatis.service.impl.MpUserServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jdk.nashorn.internal.runtime.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

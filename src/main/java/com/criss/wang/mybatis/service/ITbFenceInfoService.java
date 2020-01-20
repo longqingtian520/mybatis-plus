@@ -1,6 +1,6 @@
 package com.criss.wang.mybatis.service;
 
-import com.criss.wang.mybatis.entity.TbDeviceConnection;
+import com.criss.wang.mybatis.entity.TbFenceInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,8 +9,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author wangqiubao
- * @since 2020-01-19
+ * @since 2020-01-20
  */
-public interface  ITbDeviceConnectionService extends IService<TbDeviceConnection> {
+public interface ITbFenceInfoService extends IService<TbFenceInfo> {
 
 }
