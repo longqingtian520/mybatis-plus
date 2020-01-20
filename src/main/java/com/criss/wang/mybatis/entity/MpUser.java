@@ -34,8 +34,9 @@ public class MpUser implements Serializable {
      * ID_WORKER_STR: 字符串全局唯一ID
      * UUID: 全局唯一ID，UUID类型的主键
      * NONE: 该类型为未设置主键类型
+     * ASSIGN_ID: 自定义ID
      */
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
     private String username;
